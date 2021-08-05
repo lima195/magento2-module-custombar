@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CustomBar | LeSite
+ *
+ * @package   LeSite_CustomBar
+ *
+ * @author    Pedro Lima <phgdl.19@gmail.com>
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+    <body>
+        <referenceContainer name="after.body.start">
+            <block class="LeSite\CustomBar\Block\CustomBar"
+                   name="lesite-custom-bar"
+                   ifconfig="custombar/general/enabled">
+                <arguments>
+                    <argument name="cache_lifetime" xsi:type="number">3600</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

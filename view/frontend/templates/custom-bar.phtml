@@ -1,0 +1,6 @@
+<?php /**  @var LeSite\CustomBar\Block\CustomBar $block */ ?>
+<?php if ($customerGroup = $block->getCustomerGroup()) : ?>
+    <div id="custom-bar">
+        <span><?= $customerGroup; ?></span>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CustomBar | LeSite
+ *
+ * @package   LeSite_CustomBar
+ *
+ * @author    Pedro Lima <phgdl.19@gmail.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="custombar" translate="label" type="text" sortOrder="140" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <label>Custom Bar</label>
+            <tab>customer</tab>
+            <resource>LeSite_CustomBar::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>General Options</label>
+                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1"
+                       showInStore="1" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="logs_enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1" canRestore="1">
+                    <label>Logs Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
